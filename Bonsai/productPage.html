@@ -25,9 +25,9 @@
     <!-- SideNav-->
     <div id="mySidenav" class="sidenav">
         <a href="./account.html">Account</a>
-        <a href="./storePage_Outdoor.html">Outdoor Bonasi</a>
-        <a href="./storePage_Indoor.html">Indoor Bonsai</a>
-        <a href="./storePage_Care.html">Bonsai Care</a>
+        <a href="./storePage.html?id=outdoorBonsaiProducts">Outdoor Bonasi</a>
+        <a href="./storePage.html?id=indoorBonsaiProducts">Indoor Bonsai</a>
+        <a href="./storePage.html?id=bonsaiCareProducts">Bonsai Care</a>
         <a href="./contact.html">Contact</a>
     </div>
 
@@ -35,7 +35,7 @@
     <div id="main">
       <!-- Navbar-->
       <header class="header" id="navbar">
-        <img onclick="toggleNav()" src="./img/menuWhite.png" id="navHamburger" role="button" style="display:inline-block;">
+        <img onclick="toggleNav()" src="./img/NavBar/menuWhite.png" id="navHamburger" role="button" style="display:inline-block;">
         <a class="nav-link" href="./index.html" id="nav-item" style="display:inline-block">BONSAI</a>
       </header>
       <!--Store Page-->
@@ -45,28 +45,23 @@
             <div class="row no-gutters">
               <!--Product Image-->
               <div class="col-md-6 productImage">
-                <img src="./img/Care/BonsaiCare_1.jpg" class="card-img embed-responsive-item" alt="Bonsai Care 1">
+                <img id="productImage" src="" class="card-img embed-responsive-item" alt="">
               </div>
               <div class="col-md-6 productInfo">
                 <div class="card-body">
                   <!--Product Info-->
                   <div class="productPageIntro">
-                    <h1>Stainless Steel Bonsai Tool kit</h1>
-                    <h4>£295.00</h4>
+                    <h1 id="productTitle"></h1>
+                    <h4 id="productPrice"></h4>
                   </div>
                   <div class="productDescription">
-                    <p>High quality 7 Piece Stainless Steel Dingmu Bonsai Tool kit. An ideal gift for someone who wants to learn a bit more about bonsai.</p>
+                    <p id="productDescription"></p>
                   </div>
                   <!--Product Options-->
-                  <div class="productSelection">
-                    <div class="checkout">
-                      <div>
-                        <!--
-                        <label for="quantityInput">Qty:</label>
-                        <input id="quantityInput" type="text" class="form-control" maxlength="4">
-                        -->
-                        <button id="cartButton" class="button--primary">Add To Basket</button>
-                      </div>
+                  <div id="productOptions" class="productSelection"></div>
+                  <div class="checkout">
+                    <div>
+                      <button id="cartButton" class="button--primary">Add To Basket</button>
                     </div>
                   </div>
                 </div>
@@ -83,4 +78,5 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript" src="./js/navbar.js"></script>
+  <script type="text/javascript" src="./js/productData.js"></script>
 </html>
