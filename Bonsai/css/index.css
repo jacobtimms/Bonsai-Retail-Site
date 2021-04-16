@@ -67,7 +67,7 @@ body{
 }
 
 .mobileCTA  {
-  z-index: 100;
+  z-index: 99;
   text-align: center;
   position: relative;
   color: transparent;

@@ -4,12 +4,14 @@ let searchParams = new URLSearchParams(window.location.search)
 let UrlId = searchParams.get('id')
 
 /*FETCH PRODUCT DATA*/
-//Fetches product data passes it into product page & checkout options functions
+//Fetches product data, stores it, then passes it into product page & checkout options functions
+let productData;
 requestProductData(UrlId);
 function requestProductData(id) {
     fetch('https://tbhpwebdevapi.azurewebsites.net/api/Bonsai/' + id)
         .then(response => response.json())
         .then(function (data) {
+            productData = data;
             fillProductPage(data);
             fillCheckoutOptions(data.checkoutOptions);
             console.log(data);
@@ -27,4 +29,10 @@ function fillCheckoutOptions(productData) {
     for (a = 0; a < productData.length; a++) {
         document.getElementById(productData[a]).style.display = "inline-block"
     };
+}
+
+
+//Calls the addItemToBasket function when clicked.
+document.getElementById("cartButton").onclick = function() {
+    addItemToBasket()
 }
