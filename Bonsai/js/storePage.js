@@ -78,7 +78,7 @@ fillStorePageHTML();
 function fillStorePageHTML() {
     document.getElementById("storePageTabTitle").innerText = storePageData[store].storePageTitle;
     document.getElementById("storePageTitle").innerText = storePageData[store].storePageTitle;
-    document.getElementById("storePageDescription").innerText = storePageData[store].storePageDescription;
+    document.getElementById("storePageDescription").innerHTML = storePageData[store].storePageDescription;
 };
 
 /*FETCH PRODUCT DATA & CREATE PRODUCT CARDS*/
